@@ -1,7 +1,8 @@
 //The root component responsible for managing the state for all bots and the user's army.
 // Fetches data from the server and passes it to child components.
 import { useState, useEffect } from 'react';
-
+import BotCollection from './components/BotColloection';
+import YourBotArmy from './components/YourBotArmy';
 function App() {
   // all bots fetched from the server
   // array of enlisted bot
@@ -26,7 +27,7 @@ function App() {
     if(!army.find((b)=> b.id === bot.id)){
       setArmy([...army, bot]);
     }}
-};
+
 
 // discharge a bot from the user's army
 const dischargeBot = (bot) => {
@@ -53,9 +54,9 @@ return (
     <BotCollection bots={bots} enlistBot={enlistBot} />
   </div>
 );
-}
+};
+
 
 
 
 export default App;
-
