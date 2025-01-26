@@ -1,4 +1,8 @@
-function YourBotArmy(bots){
+//display the users enlised bots
+//each bot in the army is rendered using Botcard component
+// handlers relesing  a bot from array
+
+function YourBotArmy(){
 
     return(
         <div className="armylist">
