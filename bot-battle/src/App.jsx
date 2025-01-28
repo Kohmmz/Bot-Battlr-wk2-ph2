@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import BotCollection from "./BotColloection";
 import YourBotArmy from "./YourBotArmy";
+import {BrowserRouter as Router, Routes,Route,Link} from "react-router-dom";
 
 
 
@@ -41,16 +42,32 @@ function App() {
       })
       .catch((error) => console.error("Error removing bot:", error));
   };
-
+//Navigation links to BotCollection and YourBotArmy components
   return (
-    <div className="App">
+    <Router>
       <nav>
-        
+        <Link to="/">Bot Collection</Link> | <Link to="/army">Your Bot Army</Link>
       </nav>
-      <YourBotArmy army={army} dischargeBot={dischargeBot} removeBot={removeBot} />
-      <BotCollection bots={bots} enlistBot={enlistBot} />
-    </div>
+
+      <Routes>
+        <Route
+          path="/"
+          element={<BotCollection bots={bots} enlistBot={enlistBot} />}
+        />
+        <Route
+          path="/army"
+          element={
+            <YourBotArmy
+              army={army}
+              dischargeBot={dischargeBot}
+              removeBot={removeBot}
+            />
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
+
 
 export default App;
