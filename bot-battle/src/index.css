@@ -1,7 +1,90 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f3f3f3;
+}
+
+
+
+
+
 .bot-card{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    border: 10px solid #f3f3f3;
-    width:  40rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border: 2px solid #020202;
+}
+
+.bot-card:hover{
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+     box-shadow: 0 50px 100px #ff000033;
+
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem;
+    border: 1px solid #020202;
+  }
+.bot-army{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem;
+    border: 1px solid #020202;
+}
+.HP{
+color: green;
+
+
+}
+.DMG{
+color: red;
+}
+.DEF{
+color: blue;
+
+}
+.enlist{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 45%;
+    padding-left: 44%;
+    cursor: pointer;
+    color: green;
+    border: 1px solid #020202;
+    background-color: #020202;
+
+}
+
+.enlist:hover{
+    color: #020202;
+    background-color: green;
+    transition: all 0.3s ease;
+}
+.botimg{
+border: 2px solid #020202;
+border-radius: 20%;
+padding: center 2rem;
+padding: 3rem;
+}
+.discharge{
+color: #ff0000;
+font-size: 1rem;
+background-color: #020202;
+padding-right: 46%;
+ padding-left: 51%;
+}
+.discharge:hover{
+    color: #020202;
+    background-color: #ff0000;
+    transition: all 0.3s ease;
 }

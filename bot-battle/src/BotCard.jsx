@@ -6,22 +6,22 @@ import React from "react";
 function BotCard({ bot, handleClick, handleDischarge }) {
   return (
     <div className="bot-card">
-      <img src={bot.avatar_url} alt={bot.name} />
+      <img className="botimg" src={bot.avatar_url} alt={bot.name} />
       <h3>{bot.name}</h3>
       <p>{bot.catchphrase}</p>
       <p>
         <strong>Class:</strong> {bot.bot_class}
       </p>
       <p>
-        <strong>Health:</strong> {bot.health} <br />
-        <strong>Damage:</strong> {bot.damage} <br />
-        <strong>Armor:</strong> {bot.armor}
+        <strong className="HP">Health:</strong> {bot.health} <br />
+        <strong className="DMG">Damage:</strong> {bot.damage} <br />
+        <strong className="DEF">Armor:</strong> {bot.armor}
       </p>
-      <button onClick={handleClick} aria-label="Enlist Bot">Enlist</button>
+      <button className="enlist" onClick={handleClick} aria-label="Enlist Bot">Enlist</button>
       {handleDischarge && (
         <button
+        className="discharge"
           onClick={handleDischarge}
-          style={{ color: "red" }}
           aria-label="Discharge Bot"
         >
           x

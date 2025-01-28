@@ -45,8 +45,8 @@ function App() {
 //Navigation links to BotCollection and YourBotArmy components
   return (
     <Router>
-      <nav>
-        <Link to="/">Bot Collection</Link> | <Link to="/army">Your Bot Army</Link>
+      <nav className="nav">
+        <Link className="BotCollection" to="/">Bot Collection</Link> | <Link to="/army">Your Bot Army</Link>
       </nav>
 
       <Routes>
